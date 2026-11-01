@@ -1,4 +1,4 @@
-# ATS Pro – CV ATS Test Raporu
+# CV ATS Analyzer – ATS Test Raporu
 
 CV yükleyin (PDF / DOCX / TXT), hedef pozisyonu girin; ATS uyumunu, 100 üzerinden puanları, eksik anahtar kelimeleri ve elenme risklerini görsel skor kartı + detaylı raporla alın. Rapor tarayıcıdan PDF olarak kaydedilebilir.
 

@@ -14,7 +14,7 @@ const GLYPHS = {
 const svgIcon = (name, size = 24, width = 1.8) =>
   `<svg class="ico" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${width}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${GLYPHS[name].split(' M').map((d, i) => `<path d="${i ? 'M' : ''}${d}"/>`).join('')}</svg>`;
 
-// ATS PRO logosu: yükselen çubuklar + ok.
+// CV ATS Analyzer logosu: yükselen çubuklar + ok.
 const LOGO_SVG = `<svg class="logo-svg" viewBox="0 0 64 56" width="52" height="46" aria-hidden="true">
   <defs><linearGradient id="lg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#19c3b4"/><stop offset="1" stop-color="#4fd8ff"/></linearGradient></defs>
   <rect x="8" y="34" width="8" height="16" rx="2" fill="url(#lg)"/><rect x="21" y="26" width="8" height="24" rx="2" fill="url(#lg)"/>

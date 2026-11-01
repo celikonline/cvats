@@ -1,7 +1,7 @@
 {
   "name": "atscv",
   "version": "1.0.0",
-  "description": "ATS Pro - CV ATS uyum analizi ve skor kartı",
+  "description": "CV ATS Analyzer - CV ATS uyum analizi ve skor kartı",
   "type": "module",
   "private": true,
   "scripts": {

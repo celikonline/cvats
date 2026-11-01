@@ -71,10 +71,14 @@ function drawCard(d, photo) {
   for (const [x, y, w, h] of bars) { rr(ctx, x, y, w, h, 2); ctx.fill(); }
   ctx.strokeStyle = '#4fd8ff'; ctx.lineWidth = 3; ctx.lineCap = 'round';
   ctx.beginPath(); ctx.moveTo(28, 48); ctx.quadraticCurveTo(58, 44, 90, 22); ctx.stroke();
-  text(ctx, 'ATS', 108, 68, { size: 46, weight: 800, italic: true });
-  text(ctx, 'PRO', 108 + 92, 68, { size: 46, weight: 800, italic: true, color: '#19c3b4' });
-  ctx.fillStyle = 'rgba(120,220,230,.4)'; ctx.fillRect(330, 28, 1.5, 50);
-  text(ctx, 'CV ATS Test Raporu', 354, 64, { size: 30, weight: 700 });
+  ctx.font = `italic 800 32px ${FONT}`;
+  const cvAtsW = ctx.measureText('CV ATS ').width;
+  const analyzerW = ctx.measureText('ANALYZER').width;
+  text(ctx, 'CV ATS', 108, 66, { size: 32, weight: 800, italic: true });
+  text(ctx, 'ANALYZER', 108 + cvAtsW, 66, { size: 32, weight: 800, italic: true, color: '#19c3b4' });
+  const divX = 108 + cvAtsW + analyzerW + 22;
+  ctx.fillStyle = 'rgba(120,220,230,.4)'; ctx.fillRect(divX, 28, 1.5, 50);
+  text(ctx, 'ATS Test Raporu', divX + 22, 62, { size: 26, weight: 700, maxW: W - 28 - (divX + 22) });
 
   // Aday kartı
   const card = (x, y, w, h) => {

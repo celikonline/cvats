@@ -13,4 +13,4 @@ app.get('/api/positions', (_req, res) => res.json(POSITIONS.map((p) => p.name)))
 app.post('/api/analyze', analyzeHandler);
 
 const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`ATS Pro çalışıyor: http://localhost:${port}`));
+app.listen(port, () => console.log(`CV ATS Analyzer çalışıyor: http://localhost:${port}`));
