@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ATS Pro - CV ATS Test Raporu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span id="logo"></span><span class="brand-name">ATS <b>PRO</b></span></div>
+    <div class="topbar-title">CV ATS Test Raporu</div>
+  </header>
+
+  <main>
+    <section class="card form-card no-print" id="formCard">
+      <h1>CV'nizin ATS Check-Up Raporunu alın</h1>
+      <p class="muted">CV'nizi yükleyin; ATS uyumunu, pozisyon puanlarını, eksik anahtar kelimeleri ve elenme risklerini görün. Dosyanız yalnızca analiz için bellekte işlenir, kaydedilmez.</p>
+      <form id="form">
+        <label class="drop" id="drop">
+          <input type="file" id="file" name="cv" accept=".pdf,.docx,.txt" required>
+          <span class="drop-icon" aria-hidden="true">⇪</span>
+          <span id="dropText">CV dosyasını sürükleyin veya seçin <small>(PDF, DOCX, TXT · en çok 4 MB)</small></span>
+        </label>
+        <div class="row">
+          <label>Başvurmak istediğiniz pozisyon
+            <input type="text" name="position" id="position" list="positions" placeholder="Örn. Muhasebe Uzmanı" maxlength="120" autocomplete="off">
+          </label>
+          <label>Profil fotoğrafı <span class="muted">(isteğe bağlı — yalnızca skor kartında görünür, sunucuya gönderilmez)</span>
+            <input type="file" id="photo" accept="image/*">
+          </label>
+        </div>
+        <label>İş ilanı metni <span class="muted">(isteğe bağlı — ilandaki kelimelere göre uyum ölçülür)</span>
+          <textarea name="jobDescription" id="jd" rows="4" maxlength="8000" placeholder="İlan metnini buraya yapıştırın"></textarea>
+        </label>
+        <datalist id="positions"></datalist>
+        <button type="submit" class="btn" id="submit">Analiz Et</button>
+        <p class="error" id="error" role="alert" hidden></p>
+      </form>
+    </section>
+
+    <div id="report" hidden></div>
+  </main>
+
+  <footer class="foot no-print">Bu rapor kural tabanlı bir tahmindir; belirli bir firmanın ATS yazılımının gerçek puanı değildir.</footer>
+  <script src="icons.js"></script>
+  <script src="card.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
